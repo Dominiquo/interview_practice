@@ -1,4 +1,5 @@
 import random as rand
+import time
 
 def combine(A,B):
 	i = 0
@@ -34,12 +35,14 @@ def mergeSort(A):
 		first_half = A[:middpoint]
 		second_half = A[middpoint:]
 		return combine(mergeSort(first_half),mergeSort(second_half))
-
-init_list = range(51)
+n = 1000
+init_list = range(n)
 rand.shuffle(init_list)
 
-sorted_list = mergeSort(init_list)
+start = time.time()
+mergeSort(init_list)
+print 'n =', n, 'in', time.time()-start
 
 # check whether merge sort properly sorts the list it's given
-print all(sorted_list[i] <= sorted_list[i+1] for i in xrange(len(init_list)-1))
+# print all(sorted_list[i] <= sorted_list[i+1] for i in xrange(len(init_list)-1))
 

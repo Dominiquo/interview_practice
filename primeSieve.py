@@ -1,5 +1,5 @@
 # return all prime integers less than or equal to A very quickly
-
+import math
 def sieve(A):
     prime_list = []
     for number in range(2,A+1):
@@ -14,3 +14,5 @@ def sieve(A):
             prime_list.append(number)
             
     return prime_list
+
+# print sieve(10000)
