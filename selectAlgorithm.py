@@ -31,6 +31,8 @@ def select(input_list,k):
 			k -= (len(left_pivot) + pivot_count)
 
 
-l = range(10000000)
+l = range(100000)
 random.shuffle(l)
 select(l,63)
+
+
