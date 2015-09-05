@@ -8,7 +8,7 @@ def row_maker(n,count):
 		return [n] + row_maker(n-1,count-1) + [n]
 	return row 
 
-def prettyPrint(self,n):
+def prettyPrint(n):
 	side_length = 2*n - 1
 	num_numbers = []
 	array = []
@@ -24,5 +24,8 @@ def prettyPrint(self,n):
 
 	return array
 
+
+for row in prettyPrint(4):
+	print row
 
 # prettyPrint creates a matrix of concentric rectangles of integers representing its layer in the matrix
