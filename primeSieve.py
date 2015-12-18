@@ -15,4 +15,4 @@ def sieve(A):
             
     return prime_list
 
-# print sieve(10000)
+print sieve(10)

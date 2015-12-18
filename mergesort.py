@@ -35,6 +35,7 @@ def mergeSort(A):
 		first_half = A[:middpoint]
 		second_half = A[middpoint:]
 		return combine(mergeSort(first_half),mergeSort(second_half))
+		
 n = 1000
 init_list = range(n)
 rand.shuffle(init_list)
